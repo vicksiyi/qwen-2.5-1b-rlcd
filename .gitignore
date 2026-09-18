@@ -38,3 +38,15 @@ ENV/
 
 # Local model caches if stored in-tree
 checkpoints/
+
+.bootstrap/
+.cache/
+.python/
+models/
+
+# Local credentials and environment configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key

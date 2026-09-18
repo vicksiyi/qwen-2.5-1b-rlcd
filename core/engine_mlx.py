@@ -19,7 +19,7 @@ import mlx.core as mx
 from mlx_lm import load
 from mlx_lm.models.cache import make_prompt_cache
 
-MODEL_ID = "mlx-community/Qwen2.5-1.5B-Instruct-4bit"
+MODEL_ID = os.environ.get("MODEL_ID", "mlx-community/Qwen2.5-1.5B-Instruct-4bit")
 
 _model = None
 _tokenizer = None

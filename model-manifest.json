@@ -1,0 +1,61 @@
+{
+  "repo_id": "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+  "revision": "8b403126fc14f14cfc99bb4cfa72ecbc129ea677",
+  "files": [
+    {
+      "name": ".gitattributes",
+      "size": 1519,
+      "sha256": null
+    },
+    {
+      "name": "README.md",
+      "size": 748,
+      "sha256": null
+    },
+    {
+      "name": "added_tokens.json",
+      "size": 605,
+      "sha256": null
+    },
+    {
+      "name": "config.json",
+      "size": 784,
+      "sha256": null
+    },
+    {
+      "name": "merges.txt",
+      "size": 1671853,
+      "sha256": null
+    },
+    {
+      "name": "model.safetensors",
+      "size": 868628559,
+      "sha256": "0979f33d1bc58afcf696d13f57977644e7b11a6f0eec3e631d8e9463d18c0717"
+    },
+    {
+      "name": "model.safetensors.index.json",
+      "size": 51569,
+      "sha256": null
+    },
+    {
+      "name": "special_tokens_map.json",
+      "size": 613,
+      "sha256": null
+    },
+    {
+      "name": "tokenizer.json",
+      "size": 7031673,
+      "sha256": null
+    },
+    {
+      "name": "tokenizer_config.json",
+      "size": 7308,
+      "sha256": null
+    },
+    {
+      "name": "vocab.json",
+      "size": 2776833,
+      "sha256": null
+    }
+  ]
+}
