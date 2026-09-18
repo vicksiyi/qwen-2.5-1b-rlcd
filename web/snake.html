@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Snake Lab · 本地模型驾驶舱</title><link rel="stylesheet" href="/snake.css"></head>
+<body>
+<div class="shell">
+  <header><a class="brand" href="/snake.html"><span class="brand-icon">↳</span> SNAKE LAB <span class="edition">/ 01</span></a><a class="back" href="/">结构化决策实验室 ↗</a></header>
+  <section class="intro"><div><div class="eyebrow">PLAY WITH LOCAL INTELLIGENCE</div><h1>下一步，交给模型。</h1><p>一条蛇，三个选择。看 Qwen 如何在每一步做出决策。</p></div><div class="connection"><span id="connection-dot" class="dot"></span><div><strong id="connection">正在连接本地模型</strong><small>Qwen2.5 · 1.5B · MLX</small></div></div></section>
+  <main>
+    <section class="arena-card">
+      <div class="arena-top"><div><span class="live-mark"></span><span id="play-state">准备就绪</span></div><span class="mono">16 × 16 <span class="dim">/ GRID</span></span></div>
+      <div class="board-wrap"><canvas id="board" width="800" height="800" aria-label="贪吃蛇棋盘，可使用方向键或 WASD 控制" tabindex="0"></canvas><div id="overlay" class="overlay"><span class="overlay-symbol">↗</span><h2 id="overlay-title">让好奇心先走一步</h2><p id="overlay-text">选择模型驾驶，或亲自掌控方向。</p><button id="overlay-start" class="primary">开始游戏 <span>↗</span></button></div></div>
+      <div class="arena-bottom"><span><i class="legend-snake"></i> 蛇 <i class="legend-food"></i> 食物</span><span id="keyboard-hint">SPACE 暂停 · R 重新开始</span></div>
+    </section>
+    <aside>
+      <div class="stats"><div><span>已吃食物</span><strong id="score">00</strong></div><div><span>行进步数</span><strong id="steps">00</strong></div><div><span>本地最高</span><strong id="best">00</strong></div></div>
+      <section class="control-card"><div class="section-heading"><h2>谁来掌舵</h2><span class="tag">CONTROL</span></div><div class="mode-switch" role="group" aria-label="控制模式"><button id="mode-ai" aria-pressed="true" class="active">✧ 模型驾驶</button><button id="mode-manual" aria-pressed="false">⌘ 手动操作</button></div><div class="strategy-setting"><label for="policy">模型策略</label><select id="policy"><option value="enhanced">丰富状态 · 实验对照</option><option value="hybrid" selected>规划辅助 · 更稳健</option><option value="classic">原始模型 · 对照</option></select><p id="policy-description">规划筛选可脱身的短路径，模型在候选动作中选择；介入会标记。</p></div><div class="setting"><label for="speed">步进间隔</label><output id="speed-label">350 ms</output></div><input id="speed" type="range" min="150" max="1000" step="50" value="350"><div class="setting safety-setting"><label for="safety">防撞保护 <small>仅屏蔽下一步碰撞；规划辅助另行标记</small></label><input type="checkbox" id="safety" checked role="switch"></div><div class="button-row"><button id="toggle" class="primary">开始游戏 <span>↗</span></button><button id="reset" class="secondary" aria-label="重新开始游戏" title="重新开始">↻</button></div><p id="status-message" class="status-message" role="status">准备好后，看看模型会怎么走。</p></section>
+      <section class="decision-card"><div class="section-heading"><h2>模型此刻在想什么</h2><span class="tag" id="latency">— ms</span></div><p class="mini">下一步动作 · 候选项相对概率</p><div id="probabilities"></div><div class="decision-note" id="decision-note">等待第一步决策<span>每一步均调用本机模型</span></div><details><summary>查看模型收到的状态</summary><pre id="observation">开始模型驾驶后显示。</pre></details></section>
+      <div class="touch-controls" aria-label="手动方向控制"><button data-dir="0" aria-label="向上">↑</button><div><button data-dir="3" aria-label="向左">←</button><button data-dir="2" aria-label="向下">↓</button><button data-dir="1" aria-label="向右">→</button></div></div>
+    </aside>
+  </main>
+  <section class="history-panel"><div class="section-heading"><h2>行动轨迹 <span class="dim">/ RECENT MOVES</span></h2><span id="override-count" class="mini">防撞 0 次 · 规划 0 次</span></div><div id="history" class="history"><span class="history-empty">每一个选择，都在这里留下轨迹。</span></div></section>
+  <footer><span><span class="dot green"></span> 本地推理 · 无云端调用</span><p>模型分数不是胜率。增强策略加入记忆与动态预测；规划辅助可能改变动作，并明确标记。</p><a href="https://huggingface.co/harshatheg/Qwen-2.5-1B-RLCD" target="_blank" rel="noreferrer">基于 Qwen RLCD ↗</a></footer>
+</div><script type="module" src="/snake.mjs"></script>
+</body></html>

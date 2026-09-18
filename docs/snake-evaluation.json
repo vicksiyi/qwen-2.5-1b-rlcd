@@ -1,0 +1,71 @@
+{
+  "steps_per_game": 80,
+  "results": [
+    {
+      "seed": 0,
+      "policy": "classic",
+      "steps": 80,
+      "food": 2,
+      "revisits": 1,
+      "safety_overrides": 3,
+      "planning_overrides": 0,
+      "mean_total_ms": 232.98,
+      "status": "step_limit"
+    },
+    {
+      "seed": 0,
+      "policy": "enhanced",
+      "steps": 80,
+      "food": 0,
+      "revisits": 77,
+      "safety_overrides": 0,
+      "planning_overrides": 0,
+      "mean_total_ms": 210.85,
+      "status": "step_limit"
+    },
+    {
+      "seed": 0,
+      "policy": "hybrid",
+      "steps": 80,
+      "food": 9,
+      "revisits": 0,
+      "safety_overrides": 0,
+      "planning_overrides": 65,
+      "mean_total_ms": 216.57,
+      "status": "step_limit"
+    },
+    {
+      "seed": 1,
+      "policy": "classic",
+      "steps": 80,
+      "food": 6,
+      "revisits": 0,
+      "safety_overrides": 0,
+      "planning_overrides": 0,
+      "mean_total_ms": 378.5,
+      "status": "step_limit"
+    },
+    {
+      "seed": 1,
+      "policy": "enhanced",
+      "steps": 80,
+      "food": 0,
+      "revisits": 77,
+      "safety_overrides": 0,
+      "planning_overrides": 0,
+      "mean_total_ms": 421.72,
+      "status": "step_limit"
+    },
+    {
+      "seed": 1,
+      "policy": "hybrid",
+      "steps": 80,
+      "food": 8,
+      "revisits": 0,
+      "safety_overrides": 0,
+      "planning_overrides": 67,
+      "mean_total_ms": 391.98,
+      "status": "step_limit"
+    }
+  ]
+}

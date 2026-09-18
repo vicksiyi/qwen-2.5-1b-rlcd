@@ -137,6 +137,10 @@ def api_compare(req: PredictRequest):
         raise HTTPException(status_code=400, detail=str(e))
 
 
+from server.snake import router as snake_router
+app.include_router(snake_router)
+
+
 # Mount web frontend
 if os.path.exists(WEB_DIR):
     app.mount("/", StaticFiles(directory=WEB_DIR, html=True), name="static")
