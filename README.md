@@ -11,6 +11,10 @@
 - 上游声明许可证为 **Apache-2.0**；原始说明保存在 [README.upstream.md](README.upstream.md)。
 - 实际模型为 [mlx-community/Qwen2.5-1.5B-Instruct-4bit](https://huggingface.co/mlx-community/Qwen2.5-1.5B-Instruct-4bit)，权重不包含在本仓库。固定版本记录在 [model-manifest.json](model-manifest.json)。
 
+## 核心原理
+
+阅读 [run_parallel_generation 原理与实现](README.run_parallel_generation.zh-CN.md)：提示词构造、KV 缓存、字段并行评分、候选概率、冲突分支、TTFT 与扩展方法。内容按当前源码说明，并标注实现限制。
+
 ## 本仓库的修改
 
 - `start.sh`：使用项目虚拟环境和本地权重离线启动网页，仅监听本机。
