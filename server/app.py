@@ -141,6 +141,10 @@ from server.snake import router as snake_router
 app.include_router(snake_router)
 
 
+from server.turtle.api import router as turtle_router
+app.include_router(turtle_router)
+
+
 # Mount web frontend
 if os.path.exists(WEB_DIR):
     app.mount("/", StaticFiles(directory=WEB_DIR, html=True), name="static")
